@@ -42,31 +42,3 @@ props 传值
 * 一些 JSX 属性与 HTML 属性不相同，这样就不会与 JavaScript 的保留字相冲突，比如说，在 HTML 中的 `class` 会在 JSX 中转译为 `className`。注意这些属性都是驼峰式命名的。
 * Props 属性一样写在组件里，并且传入组件。
 
-useEffect(() => {
-
-    const getMerchlist = async () => {
-      const merchlistData = await GetMerchListData({
-        limit: 3,
-        page: page,
-        deliveryType: DeliveryType.Delivery,
-        lat: latlng.lat,
-        lng: latlng.lng,
-      })
-      if (merchlistData.restaurants[0].id === noData) {
-        setMerchlist({
-          ...merchlistData,
-          ...merchlist,
-          restaurants: [...merchlist.restaurants],
-        })
-        setData(true)
-      } else {
-        setMerchlist({
-          ...merchlistData,
-          ...merchlist,
-          restaurants: [...merchlistData.restaurants, ...merchlist.restaurants],
-        })
-      }
-    }
-    getMerchlist()
-
-  }, [page])
