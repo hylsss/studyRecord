@@ -8,15 +8,7 @@ flex gap-4
 
 #### 上中下布局
 
-<div className="flex flex-col">
-  <div className='h-10'>
-    上
-  </div>
-  <div className="flex-1">
-    中
-  </div>
-  <div className="h-10">
-    下
-  </div>
-</div>
+![image-20230721094129241](/Users/ina.h/Library/Application Support/typora-user-images/image-20230721094129241.png)
+
+
 
