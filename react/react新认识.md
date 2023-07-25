@@ -1,6 +1,8 @@
+```
 import React from "react"; 
 import logo from "./logo.svg"; 
 import "./App.css"; 
+```
 
 第一句代码引入了 React 库，这是为了将代码中的 JSX 语句转为 `React.createElement()` ，所有的 React 模块都应该引入 React 模块，否则会抛错。
 
@@ -41,4 +43,3 @@ props 传值
 * 通过把变量放在大括号中，您可以读取 JSX 的变量，如`{so}`
 * 一些 JSX 属性与 HTML 属性不相同，这样就不会与 JavaScript 的保留字相冲突，比如说，在 HTML 中的 `class` 会在 JSX 中转译为 `className`。注意这些属性都是驼峰式命名的。
 * Props 属性一样写在组件里，并且传入组件。
-
