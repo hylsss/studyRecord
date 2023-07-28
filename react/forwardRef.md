@@ -28,7 +28,7 @@ const ChildComponent = forwardRef((props, ref) => {
 
 父组件里面调用:
 
-```react
+```javascript
 // 父组件
 const ParentComponent = () => {
   const childRef = useRef();
