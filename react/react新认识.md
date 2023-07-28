@@ -1,4 +1,4 @@
-```
+```react
 import React from "react"; 
 import logo from "./logo.svg"; 
 import "./App.css"; 
@@ -12,7 +12,7 @@ import "./App.css";
 
 # index.ts
 
-```
+```react
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
@@ -22,11 +22,11 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 [Service workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 
-```
+```javascript
 import * as serviceWorker from "./serviceWorker";
 ```
 
-```
+```javascript
 serviceWorker.unregister();
 ```
 
