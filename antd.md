@@ -74,8 +74,18 @@ const config: ThemeConfig = {
 不显示上传文件的文件名  showUploadList 设置false
 
 展示代码是只上传一张图，并且在图片上传后隐藏add按钮的写法。
+
+
+
+Upload 404的时候设置成  `beforeUpload={() => false}` 控制台就不会报警了
+
+
+
 ##### 有个小坑 还得去研究一下这玩意是为啥
 使用`beforeUpload`的时候，设置了可以上传图片的大小，不管是返回的`boolean`格式还是`Promise<File>`的格式，会有拦截提示但是会触发`onChange`方法，且`onChange`返回的file对象，里面没有`status`参数，正常是会有`status`,可以通过`status`去判断可不可以上传。
+
+
+
 ##### 解决方案：
 可以通过`onChange`的size去判断是都要上传，`true`就往下执行，`false`就`return`错误
 
@@ -125,7 +135,7 @@ const config: ThemeConfig = {
 
 ###  奇奇怪怪的总结
 
-1. form表单使用`name`属性绑定表单的值，表单控件会自动添加`value`值，数据同步要干的事就会被form接管，所以我们使用setState去设置值，跟表单的值是没有关系的。
+1. form表单使用`name`属性绑定表单的值，表单控件会自动添加`value`值，数据同步要干的事就会被form接管，所以我们使用`setState`去设置值，跟表单的值是没有关系的。
 2. form表单值更新的时候使用 `form.setFieldsValue` 来动态改变表单的值
 3. 获取form表单的值使用 `form.getFieldValue`来获取对应的值 ，`form.getFieldsValue`获取表单全部的值.
 4. 当然也可以继续使用onChange方法，但是显示的时候要跟对应的组件value绑定，例如``Select` 组件 要跟对应的`value` 值绑定，不然回显不出来，或者使用**Form**组件自己的监听方法`onValuesChange` 继续监听值的变化
