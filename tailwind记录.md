@@ -8,7 +8,8 @@ flex gap-4
 
 #### 上中下布局
 
-![image-20230721094129241](/Users/ina.h/Library/Application Support/typora-user-images/image-20230721094129241.png)
+![image-20230721094129241](https://github.com/hylsss/studyRecord/assets/62007319/eec9888e-7a4b-48d8-a17b-5b71549e593e)
+
 
 
 
