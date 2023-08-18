@@ -68,6 +68,8 @@ const config: ThemeConfig = {
   </ConfigProvider>
 ```
 
+
+
 ## antd Upload组件
 
 不显示上传文件的文件名  showUploadList 设置 false
@@ -126,7 +128,7 @@ const config: ThemeConfig = {
     });
   };
    
- // customRequest 覆盖自动上传的逻辑，如果不能通过beforeUpload的校验就不会进入到这一步
+// customRequest 覆盖自动上传的逻辑，如果不能通过beforeUpload的校验就不会进入到这一步
  const handleUploadImg = (info: { file: string | Blob | RcFile }) => {
     const formData = new FormData();
     formData.append("file", info.file);
