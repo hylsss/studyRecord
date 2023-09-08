@@ -2,24 +2,29 @@
 
 ```react
 export interface IUser {
-  label： string
-  value： string
-  age: number
+  label: string;
+  value: string;
+  age: number;
 }
 
-  const handleChange = (value： string) => {
-    //打印出选中的options的value
-    console.log(value)
+const handleChange = (value: string) => {
+  // 打印出选中的 options 的 value
+  console.log(value);
+};
+
+// 这个写法是为了获取选中 option 的整块信息
+const handleChange = (value: string, options: IUser | IUser[]) => {
+  // 要先判断 options 是不是数组
+  // 单选
+  if (!Array.isArray(options)) {
+    console.log(options);
   }
-  
-  //这个写法是为了获取选中option的整块信息
-  const handleChange = (value: string, options: IUser | IUser[]) => {
-    //要先判断出options是不是数组
-    //单选
-    !Array.isArray(options) && console.log(options)
-    //多选
-    Array.isArray(options) && console.log(options)
+  // 多选
+  if (Array.isArray(options)) {
+    console.log(options);
   }
+};
+
 ```
 
 
