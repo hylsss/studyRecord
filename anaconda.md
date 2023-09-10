@@ -23,3 +23,29 @@ source activate 你的环境名称
 conda install numpy
 ```
 
+#### 停用环境
+
+```ruby
+conda deactivate
+```
+
+### 查看已安装的环境
+
+```ruby
+conda env list
+或者
+conda info --envs
+```
+
+#### 删除环境
+
+```ruby
+conda env remove --name 你的环境名称
+```
+
+#### 查看已经安装的包
+
+```ruby
+conda 
+```
+
