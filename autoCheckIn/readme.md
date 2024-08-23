@@ -18,7 +18,7 @@ https://googlechromelabs.github.io/chrome-for-testing/#stable  //根据你chrome
 
 没找到你对应的版本号，直接在链接上改成你对应的版本号，再下载（ps:我没找到我谷歌的版本号也是这么干的。。。）
 
-chromedriver存放位置  ** /usr/local/bin **
+chromedriver存放位置  /usr/local/bin
 
 ![chromedriver](https://github.com/hylsss/studyRecord/blob/main/autoCheckIn/images/chromedriver%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE.pic.jpg)
 
