@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 
 # 设置日志文件夹和日志文件名
@@ -58,7 +59,7 @@ def click_button_and_handle_popup(driver, button_xpath, popup_xpath, button_name
         logging.error(f"点击 {button_name} 按钮时出现异常: {e}")
 
 # 初始化WebDriver
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 try:
     # 打开指定网址
@@ -69,11 +70,11 @@ try:
     logging.info('输入用户名和密码')
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="username"]'))
-    ).send_keys('test')
+    ).send_keys('INA.H')
 
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="password"]'))
-    ).send_keys('123456')
+    ).send_keys('000000')
 
     # 点击登录按钮
     logging.info('点击登录按钮')
