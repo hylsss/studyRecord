@@ -18,7 +18,7 @@ https://googlechromelabs.github.io/chrome-for-testing/#stable  //根据你chrome
 
 没找到你对应的版本号，直接在链接上改成你对应的版本号，再下载（ps:我没找到我谷歌的版本号也是这么干的。。。）
 
-chromedriver存放位置 ** /usr/local/bin**
+chromedriver存放位置  ** /usr/local/bin **
 
 ![chromedriver](https://github.com/hylsss/studyRecord/blob/main/autoCheckIn/images/chromedriver%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE.pic.jpg)
 
@@ -26,7 +26,7 @@ chromedriver存放位置 ** /usr/local/bin**
 ### 需要修改路径的地方
 
 ####  **oaLogin.py**文件中的存放的log的文件夹
-![修改log路径](https://github.com/hylsss/studyRecord/blob/main/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/images/%E4%BF%AE%E6%94%B9log%E6%96%87%E4%BB%B6.jpg)
+![修改log路径](https://github.com/hylsss/studyRecord/blob/main/autoCheckIn/images/%E4%BF%AE%E6%94%B9log%E6%96%87%E4%BB%B6.jpg)
 
 #### **oaLogin.py**中登录的账号密码,修改成自己的
 ![修改账号密码](https://github.com/hylsss/studyRecord/blob/main/autoCheckIn/images/%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81.pic.jpg)
