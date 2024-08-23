@@ -6,9 +6,8 @@
 
 ```
 conda create --name autooa python=3.10.14 //autooa  虚拟环境的名字可以改，python版本也可以手动改
-conda autooa
+conda activate autooa
 pip install selenium
-
 ```
 
 安装**ChromeDriver**
@@ -19,7 +18,7 @@ https://googlechromelabs.github.io/chrome-for-testing/#stable  //根据你chrome
 
 没找到你对应的版本号，直接在链接上改成你对应的版本号，再下载（ps:我没找到我谷歌的版本号也是这么干的。。。）
 
-chromedriver存放位置  /usr/local/bin/chromedriver
+chromedriver存放位置 ** /usr/local/bin**
 
 ![chromedriver](https://github.com/hylsss/studyRecord/blob/main/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/images/chromedriver%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE.pic.jpg)
 
@@ -59,7 +58,7 @@ set logFile to "/Users/ina.h/Documents/closeWechat/log.log"
 ### 最后配置一个定时任务
 #### 修改com.user.sleepwatcher.plist,修改成你本地文件夹sleep.scpt的地址
 ```
-<string>/Users/koki/closeWechat/sleep.scpt</string>
+<string>/Users/koki/checkin/oaCheck.scpt</string>
 ```
 ![定时任务修改](https://github.com/hylsss/studyRecord/blob/main/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/images/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E4%BF%AE%E6%94%B9.jpg)
 
@@ -68,7 +67,7 @@ set logFile to "/Users/ina.h/Documents/closeWechat/log.log"
 #### ❗️❗️❗️最好是先下载lauchControl软件，然后 Reveal in finder确认一下你的定时任务是放在哪个目录的，不然放错目录定时任务是不生效的❗️❗️❗️直接把com.user.sleepwatcher.plist复制到对应文件夹也不能生效的，会报没权限，所以还是要用命令去创建比较好。
 
 ```
-nano ~/Library/LaunchAgents/com.user.sleepwatcher.plist //
+nano ~/Library/LaunchAgents/com.user.checkin.plist //
 //ctrl + O 保存
 //enter 
 //ctrl + x 退出

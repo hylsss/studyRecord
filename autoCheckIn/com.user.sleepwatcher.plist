@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.user.sleepwatcher</string>
+	<string>com.user.oacheckin</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/bin/osascript</string>
-		<string>/Users/koki/closeWechat/sleep.scpt</string>
+		<string>/Users/koki/oaCheckIn/sleep.scpt</string>
 	</array>
 	<key>StartCalendarInterval</key>
 	<array>

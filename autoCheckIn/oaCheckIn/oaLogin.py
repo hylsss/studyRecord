@@ -5,11 +5,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 from datetime import datetime
 
 # 设置日志文件夹和日志文件名
-log_folder = '/Users/ina.h/Documents/closeWechat/pythonLogs'
+log_folder = '/Users/ina.h/Documents/oaCheckIn/pythonLogs'
 log_file = 'operation_log.log'
 
 # 确保日志文件夹存在
@@ -59,7 +59,14 @@ def click_button_and_handle_popup(driver, button_xpath, popup_xpath, button_name
         logging.error(f"点击 {button_name} 按钮时出现异常: {e}")
 
 # 初始化WebDriver
-driver = webdriver.Chrome(ChromeDriverManager().install())
+chromedriver_path = '/usr/local/bin/chromedriver'
+
+# 创建一个 Service 对象
+service = Service(chromedriver_path)
+
+# 启动 Chrome 浏览器
+driver = webdriver.Chrome(service=service)
+
 
 try:
     # 打开指定网址
@@ -70,11 +77,11 @@ try:
     logging.info('输入用户名和密码')
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="username"]'))
-    ).send_keys('INA.H')
+    ).send_keys('test')
 
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="password"]'))
-    ).send_keys('000000')
+    ).send_keys('123123')
 
     # 点击登录按钮
     logging.info('点击登录按钮')
