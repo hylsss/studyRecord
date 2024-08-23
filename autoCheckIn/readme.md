@@ -8,6 +8,7 @@
 conda create --name autooa python=3.10.14 //autooa  虚拟环境的名字可以改，python版本也可以手动改
 conda activate autooa
 pip install selenium
+pip install webdriver-manager
 ```
 
 安装**ChromeDriver**
@@ -18,7 +19,7 @@ https://googlechromelabs.github.io/chrome-for-testing/#stable  //根据你chrome
 
 没找到你对应的版本号，直接在链接上改成你对应的版本号，再下载（ps:我没找到我谷歌的版本号也是这么干的。。。）
 
-chromedriver存放位置 ** /usr/local/bin**
+chromedriver存放位置  /usr/local/bin
 
 ![chromedriver](https://github.com/hylsss/studyRecord/blob/main/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/images/chromedriver%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE.pic.jpg)
 
