@@ -122,7 +122,7 @@ def run_check_in_process():
             if not btnCheckIn.is_enabled():
                 logging.info('签入按钮当前处于禁用状态，无法点击。')
                 time.sleep(5)
-                driver.get('https://.omenow.com/Schedule/MySchedule/')
+                driver.get('https://mycenter.omenow.com/attendance/index/')
                 time.sleep(10)
             else:
                 # 再次检查签出按钮状态
